@@ -19,7 +19,10 @@ export default function ReadMoreButton({ article }: Props) {
 	};
 
 	return (
-		<button className="bg-primary h-10 rounded-b-lg" onClick={handleClick}>
+		<button
+			className="bg-primary text-white h-10 rounded-b-lg"
+			onClick={handleClick}
+		>
 			Read More
 		</button>
 	);

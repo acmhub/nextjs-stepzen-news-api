@@ -17,7 +17,7 @@ export default function SearchBox() {
 
 	return (
 		<form
-			className="container flex items-center justify-between text-primary"
+			className="container flex items-center justify-between text-primary mb-10"
 			onSubmit={handleSearch}
 		>
 			<input
