@@ -1,6 +1,6 @@
 import NewsList from "./components/NewsList";
-import { categories } from "../constants";
 import fetchNews from "../lib/fetchNews";
+import { categories } from "../constants";
 
 export default async function Homepage() {
 	// const news: NewsResponse = await fetchNews(categories.join(","));
@@ -332,7 +332,7 @@ export default async function Homepage() {
 
 	return (
 		<div>
-			<NewsList />
+			<NewsList news={news} />
 		</div>
 	);
 }
