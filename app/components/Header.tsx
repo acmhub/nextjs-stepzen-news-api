@@ -8,10 +8,14 @@ import DarkModeButton from "./DarkModeButton";
 export default function Header() {
 	return (
 		<header className="container">
-			<div className="grid grid-cols-3 py-4 items-center">
+			<div className="relative flex justify-between items-center py-4">
 				<Bars3Icon className="h-8 w-8 cursor-pointer" />
 
-				<Link href="/" prefetch={false}>
+				<Link
+					href="/"
+					prefetch={false}
+					className="absolute -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2"
+				>
 					<h1 className="font-serif text-4xl text-center">
 						nextNews
 					</h1>

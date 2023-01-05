@@ -1,27 +1,51 @@
-# Next.js + Tailwind CSS Example
+# Next Stepzen News Api
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+A news app using NextJS 13, Stepzen, GraphQL, TypeScript and TailwindCSS.
 
-## Deploy your own
+## Demo
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+![project](https://i.imgur.com/WbJdMtS.png)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Features
 
-## How to use
+-   NextJS 13 with appDir experimntal features and route groups
+-   Mediastack API
+-   GraphQL API queries using StepZen
+-   Dynamic/Static Data Fetching
+-   TypeScript
+-   TailwindCSS
+-   Search Functionality
+-   Dark Mode
+-   Fully Responsive
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## How to run locally
+
+1. Clone the project
 
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+  git clone https://github.com/acmhub/nextjs-stepzen-news-api
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+2. Execute `npm install` or `yarn` to install all the packages.
+3. Go to [mediastack](https://mediastack.com/) and create an account.
+    - Copy the `API Access Key` from your [mediastack dashboard](https://mediastack.com/dashboard).
+4. Go to [stepzen](https://stepzen.com/) and create an account.
+    - Copy your `API Key`(not admin key) from your [stepzen account](https://dashboard.stepzen.com/account)
+5. Paste the keys in your .env.local file following this structure:
+
+```
+MEDIASTACK_API_KEY=your_api_access_key
+STEPZEN_API_KEY=your_api_key
 ```
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+6. Create an endpoint on your [stepzen dashboard](https://dashboard.stepzen.com/)
+7. Update the `stepzen.config.json` file in the project directory with your endpoint name
+
+```
+{
+  "endpoint": "api/your_endpoint_name"
+}
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+8. Run `npm run dev` or `yarn dev`.
+9. Go to [http://localhost:3000](http://localhost:3000).
