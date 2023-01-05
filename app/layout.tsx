@@ -9,9 +9,11 @@ export default function RootLayout({
 	return (
 		<html>
 			<head />
-			<body>
+
+			<body className="bg-[#eee] dark:bg-[#191919] dark:text-white transition-all duration-500">
 				<Header />
-				<main>{children}</main>
+
+				<main className="container">{children}</main>
 			</body>
 		</html>
 	);
