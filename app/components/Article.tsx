@@ -1,4 +1,4 @@
-import LiveTimestamp from "./LiveTimestamp";
+import React from "react";
 import ReadMoreButton from "./ReadMoreButton";
 
 type Props = {
@@ -32,7 +32,14 @@ export default function Article({ article }: Props) {
 					<footer className="text-xs text-right ml-auto flex space-x-1 pt-5 italic text-gray-400">
 						<p>{article.source} -</p>
 						<p>
-							<LiveTimestamp time={article.published_at} />
+							{new Date(article?.published_at).toLocaleDateString(
+								"en-US",
+								{
+									day: "numeric",
+									month: "long",
+									year: "numeric",
+								}
+							)}
 						</p>
 					</footer>
 				</div>
